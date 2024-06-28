@@ -9,6 +9,11 @@ const char* toss_coin() {
 int main() {
     srand(time(0));
 
+    char name[100];
+    printf("Who are you? \n> ");
+    scanf("%99s", name);
+    printf("Hello, %s!\n", name);
+
     printf("Tossing a coin...\n");
     int heads_count = 0;
     int tails_count = 0;
@@ -26,9 +31,9 @@ int main() {
     printf("Heads: %d, Tails: %d\n", heads_count, tails_count);
 
     if (heads_count > tails_count) {
-        printf("You won!\n");
+        printf("%s won!\n", name);
     } else {
-        printf("You lost!\n");
+        printf("%s lost!\n", name);
     }
 
     return 0;
